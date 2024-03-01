@@ -9,10 +9,8 @@ import Layout from "./Layout";
 import Home from "./Home";
 import "./App.css";
 import RequireAuth from "./security/RequireAuth";
-// import { useAuth } from "./security/AuthProvider";
 
 export default function App() {
-  // const auth = useAuth();
   return (
     <Layout>
       <Routes>

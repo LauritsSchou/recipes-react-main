@@ -22,6 +22,7 @@ interface Info {
 }
 
 let categories: Array<string> = [];
+//let recipes: Array<Recipe> = [];
 
 async function getCategories(): Promise<Array<string>> {
   // if (categories.length > 0) return [...categories];
@@ -29,6 +30,7 @@ async function getCategories(): Promise<Array<string>> {
   categories = [...res];
   return categories;
 }
+//CREATE addCategory HERE
 async function getRecipes(category: string | null): Promise<Array<Recipe>> {
   //if (recipes.length > 0) return [...recipes];
   console.log("category", category);

@@ -9,6 +9,7 @@ import Layout from "./Layout";
 import Home from "./Home";
 import "./App.css";
 import RequireAuth from "./security/RequireAuth";
+import CategoryForm from "./recipes/CategoryForm";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/categories/" element={<Categories />} />
+        <Route path="/add-category" element={<RequireAuth roles={["ADMIN"]}><CategoryForm/></RequireAuth>} />
         <Route path="/recipes" element={<RecipesLayout />}>
           <Route path=":id" element={<Recipe />} />
         </Route>

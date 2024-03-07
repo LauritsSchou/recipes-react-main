@@ -22,7 +22,7 @@ export default function RecipeList() {
     return (
       <li key={recipe.id}>
         <Link to={`${recipe.id}`}>{recipe.name}</Link>,{/*TODO:Eventually this should only be added for a logged in user*/}
-        {auth.isLoggedInAs(["USER"]) && (
+        {auth.isLoggedInAs(["USER", "ADMIN"]) && (
           <Link className="recipe-btn" to="/add" state={recipe}>
             Edit{" "}
           </Link>
